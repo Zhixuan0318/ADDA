@@ -56,3 +56,23 @@ In supply chains with a large network of stakeholders, achieving transparency in
 > **Industries require an external mechanism that is inherently transparent and resilient against fraud and manipulation to combine with Docusign in order to facilitate the whole last-mile logistic workflow.**
 
 **Our team come out with a solution👇** 
+
+## ✨Everything Is Possible! Docusign x Blockchain-Based Setup
+
+<hr>
+
+### 🤷‍♂️What is blockchain? How it helps?
+
+Blockchain is a shared and decentralized ledger. It enables the secure recording and verification of transactions without the need for intermediaries. Its inherent characteristics, such as immutability, transparency, and tamper-resistance, make it particularly suited for storing critical events and data in last-mile logistics, including digital agreements. It act as a strong backbone to eliminate bad actors scenarios and providing all the validation on physical events. This suitability stems from blockchain's ability to act as a reliable chain of custody, which is essential for tracking and documenting the lifecycle of goods from their origin to final delivery. 
+
+In last-mile logistics, a chain of custody ensures that every handoff, timestamp, and status update is recorded, providing a clear and indisputable audit trail. A blockchain-based setup enhances this workflow as it offers end-to-end accountability and traceability, which are invaluable in resolving disputes, as every action is tied to a verifiable stream of data, fostering trust between stakeholders. Additionally, integrating external systems for data exchange in last-mile logistics can be highly complex, particularly when incorporating role-based access control (RBAC). Blockchain simplifies this process by offering a secure, unified medium that eliminates the need for intricate integration layers, ensuring robust access control and data security, especially with a large network of stakeholders.
+
+### 💪We now have a Chain of Custody, working with Docusign
+
+![Frame 41 (5)](https://github.com/user-attachments/assets/91701dc2-d118-496c-8b17-717b37bfc264)
+
+Now we understand that setting up a chain of custody using a blockchain implementation can address issues of centralization and bad actors, while restoring the missing operational transparency. Taking a broader view, we can integrate DocuSign into our designed last-mile logistics workflow. As mentioned, DocuSign excels at maximizing document transparency within the digital agreement signing process. It provides a seamless experience for all phases of agreement signing in the last-mile logistics workflow, ensuring convenience for clients.
+
+Once the agreements are successfully handled by DocuSign, copies of those agreements, along with all key data and events occurring throughout the workflow, are securely stored on the blockchain-based chain of custody in a tamper-proof manner. Conversely, when logistics operators need to trace a specific record or event in the future, they can do so effortlessly, as everything is transparently recorded on the blockchain, ensuring the data retrieved is always accurate and verifiable.With this setup, large networks of stakeholders participating in the supply chain can also subscribe to all events recorded on the blockchain, effectively providing an external shared ledger.
+
+**While the system is promising so far, there are additional aspects that need to be considered to ensure the mechanism is complete and robust enough for real-world applications. That's why...👇**
