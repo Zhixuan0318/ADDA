@@ -59,8 +59,6 @@ In supply chains with a large network of stakeholders, achieving transparency in
 
 ## ✨Everything Is Possible! Docusign x Blockchain-Based Setup
 
-<hr>
-
 ### 🤷‍♂️What is blockchain? How it helps?
 
 Blockchain is a shared and decentralized ledger. It enables the secure recording and verification of transactions without the need for intermediaries. Its inherent characteristics, such as immutability, transparency, and tamper-resistance, make it particularly suited for storing critical events and data in last-mile logistics, including digital agreements. It act as a strong backbone to eliminate bad actors scenarios and providing all the validation on physical events. This suitability stems from blockchain's ability to act as a reliable chain of custody, which is essential for tracking and documenting the lifecycle of goods from their origin to final delivery. 
