@@ -74,3 +74,51 @@ Now we understand that setting up a chain of custody using a blockchain implemen
 Once the agreements are successfully handled by DocuSign, copies of those agreements, along with all key data and events occurring throughout the workflow, are securely stored on the blockchain-based chain of custody in a tamper-proof manner. Conversely, when logistics operators need to trace a specific record or event in the future, they can do so effortlessly, as everything is transparently recorded on the blockchain, ensuring the data retrieved is always accurate and verifiable.With this setup, large networks of stakeholders participating in the supply chain can also subscribe to all events recorded on the blockchain, effectively providing an external shared ledger.
 
 **While the system is promising so far, there are additional aspects that need to be considered to ensure the mechanism is complete and robust enough for real-world applications. That's why...👇**
+
+## 🎉We introduce the concept of ADDA
+
+![Frame 40 (4)](https://github.com/user-attachments/assets/80e7a9c9-3ff0-4e1d-8dc8-c1637fc72d27)
+
+Inspired by the concept of the chain of custody, our team has designed and developed a novel system called ADDA, which stands for Attestation Driven Distribution Assurance. As the name suggests, the core of ADDA relies on a prominent concept in the blockchain space—attestation—to provide assurance in the logistics distribution process during the last-mile delivery phase. This ensures that the delivery process is transparent, accurate, and safeguarded against bad actors.
+
+The backbone of ADDA is the blockchain, enabling immutable and verifiable records. Its core components include:
+
+- ⭐ **DocuSign:** Facilitates the digital agreement signing workflow in each phase of the last-mile logistic workflow
+
+- ⭐ **Sign Protocol:** Manages and publishes all attestations on the blockchain we are going to deploy our system on
+
+- ⭐ **World ID:** By World Foundation, which performs identity verification during the physical delivery stage in a decentralised approach.
+
+##### Highlight 1️⃣ : World ID as a fast first layer filter
+
+![Frame 43 (4)](https://github.com/user-attachments/assets/f7d0afb2-19e5-45b4-b9aa-150ee70579b1)
+
+World ID is a privacy-preserving, decentralized identity system based on zero-knowledge proof (ZKP) technology. In simple terms, a user with a World ID can securely and anonymously prove they are a real human without revealing any personal information. This underlying mechanism makes World ID an ideal choice for our team to implement a simple, fast, and powerful filter to eliminate bad actors during the parcel signing phase. With a large user base of over 9 million and the ease of acquiring a World ID, onboarding new users to the ADDA protocol becomes significantly streamlined.
+
+Each World ID distributed to users is unique. For instance, when a parcel is assigned to a recipient by the logistics system, the recipient must use their World ID to perform a verification process. In the context of World ID, this verification is referred to as an "Incognito Action." This process generates a unique zero-knowledge proof (ZKP), which is then passed to the World ID cloud verifier. The verifier checks the ZKP and returns a nullifier hash—a unique identifier tied to this specific delivery order. The nullifier hash is permanently bound to the delivery.
+
+When the parcel is delivered to the recipient's doorstep, the recipient must perform the same verification process and provide the nullifier hash. If the recipient is the intended recipient, their World ID will generate the same nullifier hash, confirming their identity. However, if a bad actor attempts to impersonate the recipient, their World ID will be unable to produce the correct nullifier hash tied to the delivery. Consequently, it becomes impossible for bad actors to pass this verification process.
+
+![Frame 45 (2)](https://github.com/user-attachments/assets/882437ee-38bc-4f8d-ad63-14b8438715ef)
+
+Although DocuSign includes a native ID Verification feature with a robust set of mechanisms—such as AI-enabled biometric liveness detection, identity document verification, knowledge-based authentication, and electronic ID verification—it primarily verifies the signer’s (client’s) identity during the parcel signing stage in the last-mile logistics workflow. However, we aim to implement an additional, external layer of verification to quickly filter out incorrect or unauthorized signees before they even reach the signing stage. This added layer speeds up the overall process and ensures that bad actors are removed from the workflow entirely, preventing them from progressing to the signing stage.
+
+World ID provides an ideal solution for this first-layer filter due to its simplicity and speed. The verification process consists of just two steps: the logistics system generates a QR code, and the recipient scans it to verify their identity. This streamlined approach makes World ID a perfect choice for a fast and efficient preliminary verification phase.
+
+The ADDA protocol, by design, is both flexible and modular. This means that World ID verification can be applied at any point within the signing stages of the last-mile logistics workflow, depending on the specific requirements. Furthermore, DocuSign’s ID Verification can always serve as a second, more detailed inner layer of verification, adding an extra layer of security. Once all verifications are successfully completed, the workflow proceeds seamlessly to the signing stage.
+
+##### Highlight 2️⃣ : On-Chain Attestation: A Logistic Cycle Wrap-Up on the Blockchain
+
+![Frame 42 (5)](https://github.com/user-attachments/assets/41e7c073-cc0c-4ee1-b286-ef68f0c4b12c)
+
+In last-mile logistics, we often encounter a miscellany of claims and assertions made by clients or logistics couriers during the workflow. For example, when a courier delivers a parcel to a recipient’s doorstep, they make a claim about this event. Traditionally, such claims rely on classic trust assumptions and system relationships, such as assuming an entity is honest or relying on an authoritative body for confirmation. However, with the evolution of blockchain technology and its tamper-proof, immutable nature, we can now safely record these attestations on-chain. This approach enables easy verification using an external shared ledger, eliminating the need to depend on DocuSign for this function, which is both challenging to manage and not designed for such use cases.
+
+For effective on-chain attestations, a well-defined schema is crucial. A schema serves as a structured framework that defines the type and format of data required for an attestation. This ensures that attestations are accurate, composable, and insightful for any observer (verifier) within the logistics stakeholder network. An analogy to understand a schema is to think of it as the blueprint for an attestation. It provides the necessary context and clarity that an attester uses to create meaningful confirmations.
+
+Our team designed a schema tailored for recipients and logistics stakeholders, which includes all agreement details, photographic evidence, identity verification information of the involved parties, and other relevant on-chain data. This schema ensures that every attestation is robust and comprehensive.
+
+Using the Sign Protocol, which provides a suite of tools, infrastructure, and standards, we can facilitate the submission of these structured attestations to the blockchain network. This results in a chain of attestations, where each attestation encapsulates the details of a single last-mile logistics cycle. With the Sign Scan Explorer, these attestations can be queried at any time.
+
+> 🎉🎉🎉
+> **Hooray! With everything in place, let's see how they work together!👇**
+
