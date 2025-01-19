@@ -122,3 +122,76 @@ Using the Sign Protocol, which provides a suite of tools, infrastructure, and st
 > 🎉🎉🎉
 > **Hooray! With everything in place, let's see how they work together!👇**
 
+## 🛠️Architecture and App Flow Overview 
+
+To demonstrate the concept of the ADDA protocol and showcase the feasibility of combining DocuSign and blockchain technologies in a real-life last-mile logistics application, our team designed a proof of concept (PoC), which serves as a research prototype, based on a simple parcel delivery workflow. This workflow involves three distinct parties:
+
+1. **🧑Sender**: Responsible for sending a parcel to the recipient through the logistics system.
+
+2. **👨Recipient**: The individual receiving the parcel sent by the sender through the logistics system.
+
+3. **👨‍🦱Logistics**: The entity that delivers the sender’s parcel to the recipient’s doorstep.
+
+➡️This workflow comprises 5️⃣ sequential events:
+
+1. The sender creates a delivery order for their parcel through the logistics system.
+
+2. The recipient accepts the delivery order and waits for the parcel to be delivered.
+
+3. The parcel is delivered to the recipient’s doorstep, initiating the parcel signing stage between the recipient and logistics.
+
+4. The logistics provider completes their part of the parcel signing process.
+
+5. The recipient completes their part of the parcel signing process.
+
+👇Below attached is a high-level architectural overview of the application, divided into two major components:
+
+1. **✅Our DocuSign Setup**
+2. **✅Our Decentralized Application (DApp) Setup**
+
+> 👋**Note**: When an application implemented blockchain-related features, we called it a **DApp - Decentralised Application**
+
+![Frame 44 (2)](https://github.com/user-attachments/assets/e4e6ada6-dcb9-4070-8d00-c0ddbe6cf539)
+
+> 🏃‍♂️ We have a speedrun explanation of the whole architecture in our demo video!
+
+### ✅Our DocuSign Setup
+
+1. The sender initiates the process by creating a delivery order in our logistics system. This process is facilitated by a `DocuSign Web Form`. To create the delivery order, the sender is required to sign a **📑parcel delivery agreement** that includes general parcel details, sender information, and recipient information. To streamline this process, our team created a parcel delivery agreement template and configured a corresponding `DocuSign Web Form`. The generated web form instance simplifies the collection of all necessary information for the agreement while providing a user-friendly experience for the sender. Once the web form is submitted, an agreement envelope is generated, and the sender enters an embedded signing session powered by `DocuSign eSignature`.
+
+2. After the sender creates the delivery order, the workflow requires the recipient to accept it before the parcel can be delivered. During this phase, the recipient must sign a **📑pre-delivery agreement**. Our team prepared a template for this agreement, and an envelope is generated for the recipient. The fields in the agreement are pre-filled with the information collected in Step 1’s web form. The agreement is sent to the recipient's email address provided by the sender. The recipient completes the signing process remotely using `DocuSign eSignature`.
+
+3. When the logistics provider delivers the parcel to the recipient’s doorstep, both the logistics representative and the recipient enter the parcel signing stage. Before proceeding with the parcel signing, they are required to sign terms and conditions. Our team prepared these **📑terms and conditions** using an elastic template. This template generates an embedded session, enabling both parties to use elastic signing to accept the terms and conditions. Consent is captured using `DocuSign Click`.
+
+4. During the parcel signing stage, the logistics provider signs the **📑delivery completion agreement**. A template for this agreement is already prepared, and the logistics provider completes the signing in an embedded signing session powered by `DocuSign eSignature`.
+
+5. Similarly, the recipient acknowledges the delivery by signing the **📑acknowledgment of delivery agreement**. The template for this agreement is also pre-configured, and the recipient completes the signing in an embedded signing session, again powered by `DocuSign eSignature`.
+
+6. `Docusign Connect` is used to keep track the status of all signing activities happening in the workflow and also powering the waiting room during the parcel signing process. 
+
+### ✅Our Decentralized Application (DApp) Setup
+
+1. All signed agreement copies mentioned in the DocuSign setup section are uploaded and stored in Pinata storage. Pinata is a Web3 storage solution built on blockchain technologies, ensuring that all stored data is immutable and tamper-proof. This immutability is achieved because data stored on Pinata is represented as CID (Content Identifier) hashes rather than URLs. CID hashes are derived directly from the content of the data itself. If any content changes, the corresponding CID will also change. Thus, in this phase, we capture and store all the CIDs of the agreements.
+
+2. During the parcel signing stage, both the logistics provider and the recipient are required to take photos of the parcel delivery to document its condition. These photos are uploaded to Pinata as photographic evidence. Both parties' photographic evidence is also represented as CID hashes, ensuring tamper-proof storage.
+
+3. To interact with blockchain features, clients need to connect to the public blockchain chosen for the application (opBNB blockchain). Clients must perform blockchain actions, such as attestations, using a blockchain account referred to as an Externally Owned Account (EOA). To simplify onboarding for clients with no blockchain or cryptocurrency knowledge, our team integrated Dynamic. Dynamic allows users to create a blockchain account linked to their social accounts (e.g., Google login). This setup enables users to access their blockchain account seamlessly by logging in with their Google account.
+
+4. World ID integration includes a connection process (Incognito Action) powered by World ID-Kit. This enables clients to link their World ID, generate zero-knowledge (ZK) proofs, and verify them using the native cloud verifier provided by World ID.
+
+5. The core mechanisms of ADDA include recipient verification, which binds the recipient's World ID to the delivery; recipient delegation, allowing a delegated recipient to bind their World ID to the delivery; and a pre-attestation check conducted during the parcel signing stage with the support of World ID integration.
+
+6. Firebase is used to store nullifier hashes bound to each parcel delivery. These hashes can be retrieved and compared during the recipient verification phase to ensure data consistency and security.
+
+7. The parcel delivery creation system records unique delivery IDs and timestamps for each delivery, ensuring proper tracking and traceability.
+
+8. An attestation schema is formed with the following structure:
+     - CIDs of all signed agreement copies
+     - Photo evidence CIDs
+     - Delivery ID
+     - Delivery timestamp
+     - Identity verification information of the opposite party
+
+9. The structured claims, based on the defined schema, are submitted to the opBNB blockchain as on-chain attestations using the Sign Protocol.
+
+
