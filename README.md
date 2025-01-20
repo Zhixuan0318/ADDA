@@ -195,3 +195,26 @@ To demonstrate the concept of the ADDA protocol and showcase the feasibility of 
 9. The structured claims, based on the defined schema, are submitted to the opBNB blockchain as on-chain attestations using the Sign Protocol.
 
 
+## 🚩The Next Step of ADDA Protocol
+
+### Milestone #1️⃣: Launching Pilot Programs with Local 3PL
+
+![Image](https://github.com/user-attachments/assets/07c0e8ef-3d9a-486a-bbb7-5803b50fac9d)
+
+Our team is based in Malaysia, making it a great place to start within our local community. We see significant potential in partnering with last-mile delivery providers and onboarding them to use the ADDA Protocol. As blockchain technology is still relatively new across industries—and the integration of Docusign technologies with blockchain even more so—it remains in an early validation stage. Launching pilot programs presents an ideal go-to-market strategy, offering industries a low-commitment way to trial our product while enabling us to continuously refine and achieve a stronger product-market fit (PMF). Moreover, this approach helps drive greater adoption of the Docusign ecosystem.
+
+### Milestone #2️⃣: The First Web3.0 Extension App on Docusign
+
+![Image](https://github.com/user-attachments/assets/ae09a235-652f-4967-a027-a6053f520af6)
+
+During the hackathon, our team explored the concept of extension apps and discovered an exciting opportunity: there are currently no blockchain-related extension apps available in the Docusign marketplace that can be incorporated into Maestro workflows. Introducing a blockchain-focused extension app would undoubtedly attract more Web3 companies to adopt Docusign.
+
+For example, in the context of last-mile logistics with a blockchain-based setup, an extension app that stores agreement copies on decentralized storage solutions like Pinata could be used for attestation or other advanced blockchain applications. This functionality could seamlessly integrate into future logistics workflows across various industries.
+
+Although we couldn't include our own extension app in our proof of concept due to the limited timeframe, it is now part of our roadmap and will be available soon!
+
+### Milestone #3️⃣: Sign with Docusign, Pay in Crypto
+
+![Image](https://github.com/user-attachments/assets/f26032b1-8afb-410a-9a6d-5b23332c4590)
+
+Our team ❤️ the "sign and pay" feature provided by Docusign, as it unlocks numerous practical applications in real-life scenarios, including last-mile logistics, such as cash-on-delivery (COD). Since the ADDA Protocol is built on blockchain technology, this feature also creates an exciting opportunity to seamlessly integrate cryptocurrency payments into the signing process. Looking ahead, the potential to implement automated payments through smart contracts after successful signing further enhances the possibilities for ADDA Protocol development. 
