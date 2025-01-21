@@ -218,3 +218,17 @@ Although we couldn't include our own extension app in our proof of concept due t
 ![Image](https://github.com/user-attachments/assets/f26032b1-8afb-410a-9a6d-5b23332c4590)
 
 Our team ❤️ the "sign and pay" feature provided by Docusign, as it unlocks numerous practical applications in real-life scenarios, including last-mile logistics, such as cash-on-delivery (COD). Since the ADDA Protocol is built on blockchain technology, this feature also creates an exciting opportunity to seamlessly integrate cryptocurrency payments into the signing process. Looking ahead, the potential to implement automated payments through smart contracts after successful signing further enhances the possibilities for ADDA Protocol development. 
+
+## 🧘‍♂️Our Reflections
+
+Our team specializes in Web3 development and blockchain technology. However, this was our first time working with Docusign technologies, and we’re grateful to the hackathon for providing this opportunity. We spent a significant amount of time exploring and experimenting in the sandbox environment, figuring out how to seamlessly integrate blockchain with Docusign. The challenge lay in reconciling the differences in tech stacks and implementations within a tight timeframe.
+
+Designing the underlying mechanism and workflow for the ADDA Protocol was another major hurdle. This required in-depth research into the challenges and pain points of the last-mile logistics sector, as well as brainstorming solutions that effectively address each issue in a cohesive and practical way (combining every part to form the final pipeline).
+
+What's worth mentioning is, introducing Web3 blockchain technology into the Docusign ecosystem—largely a Web2 space—was relatively unfamiliar territory for the audience, community, and judges. We invested a lot of effort in figuring out how to present these novel concepts clearly, ensuring the workflow and its underlying value were communicated effectively. **You can see how much we wrote for this project🥳**
+
+Throughout this journey, we learned a great deal, driven by continuous research and a process of trial and error to create the best proof of concept (PoC) for the hackathon. We are proud to have developed a feasible and innovative approach that addresses operational transparency challenges in the logistics space by combining advanced blockchain implementations with Docusign technologies.
+
+**Making the impossible...possible**, 
+<br>
+ADDA Protocol Team❤️
